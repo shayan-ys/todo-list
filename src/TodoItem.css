@@ -1,0 +1,25 @@
+.todo-list li {
+  list-style: none;
+  margin-top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.todo-list li i.completed {
+  margin-right: 13px;
+}
+
+.todo-list li.is-done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.todo-list li button.delete {
+    background: none;
+    border: 0;
+    float: right;
+    color: darkgrey;
+    padding: 0 17px 0 17px;
+}
+.todo-list li button.delete:hover {
+    color: black;
+}

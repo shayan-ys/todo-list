@@ -1,0 +1,26 @@
+.todo-list {
+  margin-bottom: 37px;
+}
+
+input.new-todo {
+  width: 90%;
+}
+button.add-button {
+  border-radius: 100%;
+  margin: -5px 0 0 3px;
+  font-size: 20px;
+}
+
+.input-button-wrapper {
+  float: left;
+  width: 100%;
+}
+.input-wrapper {
+  float: right;
+  width: 100%;
+  margin-right: 200px;
+}
+.button-wrapper {
+  float: right;
+  width: 200px;
+}
