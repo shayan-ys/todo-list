@@ -3,7 +3,7 @@ import './TodoList.css';
 import { Cookies } from 'react-cookie';
 import { TodoItem } from './TodoItem';
 
-export default class TodoList extends React.Component {
+export class TodoList extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,6 +16,7 @@ export default class TodoList extends React.Component {
                 todoList: {},
                 count_total: 0,
                 count_incomplete: 0,
+                next_id: 0,
                 new_todo_value: ''
             };
         }
@@ -55,12 +56,13 @@ export default class TodoList extends React.Component {
                 return {new_todo_value: ''};
             }
 
-            state.todoList[state.count_total] = {id: state.count_total, text: state.new_todo_value, completed: false};
+            state.todoList[state.next_id] = {id: state.next_id, text: state.new_todo_value, completed: false};
             return {
                 new_todo_value: '',
                 todoList: state.todoList,
                 count_total: state.count_total + 1,
-                count_incomplete: state.count_incomplete + 1
+                count_incomplete: state.count_incomplete + 1,
+                next_id: state.next_id + 1
             };
         }, this.setStateCallback);
     }
